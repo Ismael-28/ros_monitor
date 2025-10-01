@@ -1,0 +1,28 @@
+<%
+# Input parameters
+tb_namespace           = @settings["tb_namespace"]
+%>
+name: <%= tb_namespace %>
+attach: false
+root: ./
+startup_window: mission_monitoring
+windows:
+  # Mission Monitoring
+  - mission_monitoring:
+      layout:
+      panes:
+        - echo Run here the mission
+
+  # Keyboard teleop
+  - keyboard:
+      layout:
+      panes:
+        - ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+  # Camera
+  - camera:
+      layout:
+      panes:
+        - ros2 run rqt_image_view rqt_image_view /image_raw/compressed
+        - python3 save_mp4_from_topic.py --outfile record_Alfa2_default_2025-09-17_2.mp4
+        - python3 camera_metrics.py --viewer

@@ -2,7 +2,7 @@
 # Input parameters
 tb_namespace           = @settings["tb_namespace"]
 %>
-name: <%= tb_namespace %>
+name: ground_station_teleop
 attach: false
 root: ./
 startup_window: mission_monitoring

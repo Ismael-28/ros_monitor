@@ -67,7 +67,7 @@
    std::string base_frame_;
    std::string rigid_body_frame_;
    double orientation_alpha_ = 1.0;
-   geometry_msgs::msg::PoseStamped lgt_pose_broadcaster_nodeast_pose_msg_;
+   geometry_msgs::msg::PoseStamped last_pose_msg_;
  
   public:
    explicit GTPoseBroadcaster(

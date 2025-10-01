@@ -23,4 +23,7 @@ windows:
   - sensors:
       layout:
       panes:
-      - ros2 run realsense2_camera realsense2_camera_node
+      # ros2 run realsense2_camera realsense2_camera_node
+        - ros2 run usb_cam usb_cam_node_exe --ros-args -p video_device:=/dev/video0 -p framerate:=5.0
+        - python3 camera_metrics.py
+        - python3 save_mp4_from_topic.py --outfile records/record.mp4

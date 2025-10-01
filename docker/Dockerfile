@@ -1,7 +1,7 @@
 FROM osrf/ros:jazzy-desktop-full
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y  git \
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y  git \
     tmux \
     tmuxinator \
     vim \
@@ -19,8 +19,13 @@ RUN apt-get install -y  git \
     build-essential \
     cmake \
     lsb-release \
-    iputils-ping 
-    
+    iputils-ping \
+    wireless-tools \
+    iw \
+    iperf3 \
+    tshark \
+    python3-venv
+
 RUN echo "set -g mouse on" > /root/.tmux.conf
 
 ## ROS2 Jazzy utils
@@ -76,6 +81,9 @@ RUN . /opt/ros/jazzy/setup.sh && colcon build --symlink-install --executor seque
 # Install realsense
 RUN apt-get install ros-jazzy-librealsense2* ros-jazzy-realsense2-* -y
 # COPY rules below
+
+# Install usb_cam
+RUN apt-get install ros-jazzy-usb-cam -y
 
 # NAV2
 RUN apt update && apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-nav2-minimal-tb* -y

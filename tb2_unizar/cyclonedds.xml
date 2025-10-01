@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<CycloneDDS>
+  <Domain id="any">
+    <General>
+      <Interfaces>
+        <!-- Usa address con la IP de tu interfaz Wi-Fi "managed"
+             o name con el nombre exacto del interfaz, p.ej. wlan1 -->
+        <NetworkInterface name="wlp0s20f3" presence_required="false"/>
+        <NetworkInterface name="wlx00c0cab2bc2c" presence_required="false"/>
+        <!-- o: <NetworkInterface name="wlan1"/> -->
+      </Interfaces>
+    </General>
+    <!-- Opcional: descubrimiento por unicast para no depender de multicast -->
+    <Discovery>
+      <Peers>
+        <Peer address="192.168.68.109"/>
+      </Peers>
+    </Discovery>
+  </Domain>
+</CycloneDDS>

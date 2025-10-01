@@ -1,0 +1,6 @@
+Invoking command in '/root/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake /root/ros_ws/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/root/ros_ws/install/cpp_pubsub
+Invoked command in '/root/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake /root/ros_ws/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/root/ros_ws/install/cpp_pubsub
+Invoking command in '/root/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake --build /root/ros_ws/build/cpp_pubsub -- -j14 -l14
+Invoked command in '/root/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake --build /root/ros_ws/build/cpp_pubsub -- -j14 -l14
+Invoking command in '/root/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake --install /root/ros_ws/build/cpp_pubsub
+Invoked command in '/root/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/optitrack_ws/install/mocap4r2cli:/opt/ros/jazzy /usr/bin/cmake --install /root/ros_ws/build/cpp_pubsub
