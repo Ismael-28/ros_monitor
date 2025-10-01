@@ -22,7 +22,6 @@ services:
       
       # By default, mount the current directory (Option 1 in README.md). Change to the line below for development (Option 2 in README.md)
       - ./tb2_unizar:/root/tb2_unizar_ws/src/tb2_unizar
-      - ./ros_ws:/root/ros_ws
       - ./monitor:/root/monitor
       - venv_data:/root/monitor/venv       # ★ venv separado dentro del contenedor
     network_mode: "host"
