@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Procesa CSV de monitorización bajo rutas:
   ./YYYY-MM-DD/datos_graficas/<interfaz>/*.csv
