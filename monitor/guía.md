@@ -171,7 +171,7 @@ python3 main.py wifi wlan0 -t 127.0.0.1 -i 0.1 -w wlan0mon -n audit_wifi
 
 Conjunto de utilidades que **no** forman parte del programa principal, pero aportan funciones de soporte.
 
-### `change_bgscan.sh` (Bash)
+### `set_bgscan.sh` (Bash)
 
 - **Qué hace:** Lista redes Wi-Fi configuradas con `wpa_cli list_networks` y **(intenta)** aplicar `set_network <ID> bgscan "simple:30:-120:30000"` a cada una.
 - **Modo interactivo:** Si no pasas interfaz, te muestra un menú para elegirla (detecta interfaces con `iwconfig`).
@@ -183,7 +183,7 @@ Conjunto de utilidades que **no** forman parte del programa principal, pero apor
   ```
 
 
-### `summarize_csvs.py` (Python)
+### `results_parser.py` (Python)
 
 * **Qué hace:** Recorre CSVs de monitorización bajo `./YYYY-MM-DD/datos_graficas/<interfaz>/*.csv`, **agrega** métricas por fichero y muestra tablas **resumen por grupo** (Media/Mín/Máx). Incluye enlaces clicables al fichero de origen (si el visor lo permite).
 * **Entrada esperada:** CSVs con cabecera de metadatos `#METADATA_START ... #METADATA_END` y campos numéricos (latencia, jitter, pérdida, etc.).
@@ -202,11 +202,11 @@ Conjunto de utilidades que **no** forman parte del programa principal, pero apor
   python3 results_parser.py
 
   # Con alias de interfaces y agrupación por Día -> Interfaz
-  python3 summarize_csvs.py --iface-alias iface_alias.json -d -i
+  python3 results_parser.py --iface-alias iface_alias.json -d -i
 
   # Solo por Interfaz -> Grupo
-  python3 summarize_csvs.py -i
+  python3 results_parser.py -i
 
   # Solo por Día -> Grupo
-  python3 summarize_csvs.py -d
+  python3 results_parser.py -d
   ```
